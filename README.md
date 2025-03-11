@@ -26,7 +26,8 @@ Now is a great time to upload any iso files that you want to use to your proxmox
 
 # Hiding the secrets 
  
-Cloud providers offer ways to store you sensitive data. Since, this is a demo, we will be storing confidential information to our current working directory.
+Cloud providers offer ways to store your sensitive data. Since, this is a demo, we will be storing confidential information to our current working directory.
+
 Once you have your token, create a secret.tfvars file to store your login credentials. A sample secret.tfvars is provided. Just make sure you remove the trailing "example" from the file name. 
 
 # Deployment
@@ -45,7 +46,7 @@ terraform plan -var-file="secret.tfvars"
 
 Terraform will tell us what it will create. If there is anything that Terraform doesn't know it will throw out a error at this point.
 
-ex output:
+expected output for linux vm:
 ```
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
@@ -162,9 +163,7 @@ Good Job! You learned how to automate deployment in Proxmox with Terraform
 
 # Final Thoughts
 
-Learning Terraform was challenging! When I first saw Terraform codes, the language seems complicated and so different from low leveling programming languages like C, at least that was how I felt. However, after I started coding and getting comfortable with it, Terraform wasn't as hard as I initally thought it was. It was so EASY!!! Aside from spending hours on reading documentation on Proxmox and Terraform, the most complicated thing was the proccess of figuring out what you want and putting that into code so that Terraform knows what you want.  
-
-Everyone's experience with Terraform will be different. Others may find it simple to understand while the rest will struggle a "bit" but learning Terraform was a fun and exciting.
+Learning Terraform was challenging! When I first saw Terraform codes, the language seems complicated and different from low leveling programming languages like C, at least that was how I felt. However, after I started coding and getting comfortable with it, Terraform wasn't as hard as I initally thought it was. Aside from spending hours on reading documentation on Proxmox and Terraform, the most complicated thing was the proccess of figuring out what you want and putting that into code so that Terraform knows what you want. Learning Terraform was a fun and exciting experience.
 
 # Reference Link
 
