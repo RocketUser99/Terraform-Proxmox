@@ -30,7 +30,26 @@ Cloud providers offer ways to store your sensitive data. Since, this is a demo, 
 
 Once you have your token, create a secret.tfvars file to store your login credentials. A sample secret.tfvars is provided. Just make sure you remove the trailing "example" from the file name. 
 
-# Deployment
+# Provisioning
+
+## Linux VM
+
+Make any modification you would like in the linux_vm.tf file and run the appy command below. 
+
+## Window vm
+
+Due to provider limitation, its more ideal to provision a window vm by cloning from a window vm template. More info about cloning from a template is coming!!
+
+## Ubuntu Cloud deployment
+
+For cloud init deployment, if you dont have a configuration file, you can manually configure the vm. Just make sure you make the necessary changes to the linux_cloud_init.tf file.
+
+**Important**
+To automate cloud init deployment, make sure you have created a configuration file and uploaded it to the directory /var/lib/vz/snippets/ on your proxmox server or it will not work. Configuration example files is linked in reference link, check it out if you need guidance.
+
+# Usage
+
+
 
 If you had not already do so, clone this repo to your desktop and open your terminal to this repo. To initalize Terraform inside of this repo, run:
 
@@ -170,3 +189,5 @@ Learning Terraform was challenging! When I first saw Terraform codes, the langua
 For more details, check out the official [Terraform](https://k3s.io/) and [VM Qemu Resource](https://registry.terraform.io/providers/Telmate/proxmox/latest/docs/resources/vm_qemu)  webpage.
 
 Privilege Separation?? Check [this](https://github.com/Telmate/terraform-provider-proxmox/issues/784) out
+
+For Cloud init config examples: Cloud init official [repo](https://github.com/canonical/cloud-init/tree/fbcb224bc12495ba200ab107246349d802c5d8e6/doc/examples)
