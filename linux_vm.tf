@@ -61,7 +61,7 @@ resource "proxmox_vm_qemu" "linux-vm" {
         ide {
             ide0 {
                 cdrom {
-                    iso = var.Operating_system
+                    iso = var.ubuntu_operating_system
                 }
             }
         }

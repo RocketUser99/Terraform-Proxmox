@@ -33,7 +33,7 @@ variable "tokenid" {
     sensitive = true
 }
 
-variable "Operating_system" {
+variable "ubuntu_operating_system" {
   description = "iso file name"
   type = string
   sensitive = true
@@ -53,6 +53,37 @@ variable "win_virt_driver" {
 
 variable "win_operating_system" {
   description = "window iso"
+  type = string
+  sensitive = true
+}
+
+variable "user_username" {
+  description = "name for the ssh user"
+  type = string
+  sensitive = true
+}
+
+variable "user_password" {
+  description = "password for user"
+  type = string
+  sensitive = true
+}
+
+variable "ssh_private_key_value" {
+  description = "id_rsa.pub"
+  type = string
+  sensitive = true
+}
+
+variable "static_ip_config_info" {
+  description = "static ip for cloud init vm"
+  type = string
+  sensitive = true
+}
+
+
+variable "file_path" {
+  description = "file path of config stored on the proxmox server"
   type = string
   sensitive = true
 }
